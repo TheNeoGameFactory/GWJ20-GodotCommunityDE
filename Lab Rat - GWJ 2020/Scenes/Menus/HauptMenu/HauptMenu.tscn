@@ -1,17 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=2]
 =======
 [gd_scene load_steps=5 format=2]
 >>>>>>> 05641fc... Hauptmenü hinzugefügt
+=======
+[gd_scene load_steps=6 format=2]
+
+>>>>>>> 771de09... Rechtschreibfehler, neue Rattenszene, johns ratte, canomi und grundgerüst
 
 [ext_resource path="res://Textures/Menus/Hauptmenu/title.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Menus/Hauptmenu/label_new_game.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Menus/Hauptmenu/label_continue.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Menus/Hauptmenu/label_options.png" type="Texture" id=4]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [ext_resource path="res://Scenes/Menus/HauptMenu/HauptMenu.gd" type="Script" id=5]
 =======
 >>>>>>> 05641fc... Hauptmenü hinzugefügt
+=======
+[ext_resource path="res://Scenes/Menus/HauptMenu/HauptMenu.gd" type="Script" id=5]
+>>>>>>> 771de09... Rechtschreibfehler, neue Rattenszene, johns ratte, canomi und grundgerüst
 
 [node name="HauptMenu" type="MarginContainer"]
 anchor_right = 1.0
@@ -21,9 +30,13 @@ margin_top = 50.0
 margin_right = -50.0
 margin_bottom = -50.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 script = ExtResource( 5 )
 =======
 >>>>>>> 05641fc... Hauptmenü hinzugefügt
+=======
+script = ExtResource( 5 )
+>>>>>>> 771de09... Rechtschreibfehler, neue Rattenszene, johns ratte, canomi und grundgerüst
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -79,6 +92,10 @@ size_flags_vertical = 0
 icon = ExtResource( 4 )
 flat = true
 <<<<<<< HEAD
+<<<<<<< HEAD
 [connection signal="button_down" from="HBoxContainer/VBoxContainer/MenuOptions/NewGame" to="." method="_on_NewGame_button_down"]
 =======
 >>>>>>> 05641fc... Hauptmenü hinzugefügt
+=======
+[connection signal="button_down" from="HBoxContainer/VBoxContainer/MenuOptions/NewGame" to="." method="_on_NewGame_button_down"]
+>>>>>>> 771de09... Rechtschreibfehler, neue Rattenszene, johns ratte, canomi und grundgerüst

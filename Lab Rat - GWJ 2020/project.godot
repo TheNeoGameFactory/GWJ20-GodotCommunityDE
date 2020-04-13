@@ -16,7 +16,15 @@ _global_script_class_icons={
 [application]
 
 config/name="Lab Rat - GWJ 2020"
+<<<<<<< HEAD
 run/main_scene="res://Scenes/Menus/HauptMenu/HauptMenu.tscn"
+=======
+<<<<<<< HEAD
+run/main_scene="res://Scenes/move.tscn"
+=======
+run/main_scene="res://Scenes/Menus/HauptMenu/HauptMenu.tscn"
+>>>>>>> b54b500... eine Rechtschreibfehler verbessert. hauptsächlich als test
+>>>>>>> 771de09... Rechtschreibfehler, neue Rattenszene, johns ratte, canomi und grundgerüst
 config/icon="res://icon.png"
 
 [autoload]

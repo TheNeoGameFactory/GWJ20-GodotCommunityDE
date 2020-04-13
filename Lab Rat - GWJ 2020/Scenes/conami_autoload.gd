@@ -1,7 +1,11 @@
 extends Node
 
 
+<<<<<<< HEAD
 var conami = ["up", "up", "down", "down", "left", "right", "left", "right", "B", "A"] 
+=======
+var conami = ["up", "up", "down", "down", "left", "right", "left", "right", "A", "B"] 
+>>>>>>> 771de09... Rechtschreibfehler, neue Rattenszene, johns ratte, canomi und grundgerüst
 var lastet_inputs =[]
 
 
