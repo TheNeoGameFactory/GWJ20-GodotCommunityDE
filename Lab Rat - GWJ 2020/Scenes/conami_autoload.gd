@@ -1,7 +1,7 @@
 extends Node
 
 
-var conami = ["up", "up", "down", "down", "left", "right", "left", "right", "A", "B"] 
+var conami = ["up", "up", "down", "down", "left", "right", "left", "right", "B", "A"] 
 var lastet_inputs =[]
 
 
