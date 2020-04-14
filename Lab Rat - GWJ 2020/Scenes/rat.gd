@@ -1,6 +1,6 @@
 extends KinematicBody
 
-var speed = 0.1
+var speed = 5
 
 func _physics_process(delta):
 	var move = Vector3(0,-1,0)
@@ -14,7 +14,7 @@ func _physics_process(delta):
 		self.rotation.y += 1 * delta
 
 	move = move.rotated(Vector3(0,1,0).normalized(),rotation.y)
-	move = move_and_collide(move*speed)
+	move = move_and_slide(move*speed, Vector3(0,1,0))
 
 
 func _ready():
