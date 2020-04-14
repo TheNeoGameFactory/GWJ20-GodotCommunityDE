@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Lab Rat - GWJ 2020"
-run/main_scene="res://Scenes/testszene_für_ratten-movement.tscn"
+run/main_scene="res://Scenes/Menus/HauptMenu/HauptMenu.tscn"
 config/icon="res://icon.png"
 
 [rendering]
