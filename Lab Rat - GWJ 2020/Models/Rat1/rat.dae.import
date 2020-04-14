@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/egg.glb-ba9d7f7d2e5da7f888c9530ce65b438c.scn"
+path="res://.import/rat.dae-6f995805ce63bca792f4afbc507aa931.scn"
 
 [deps]
 
-source_file="res://Models/egg.glb"
-dest_files=[ "res://.import/egg.glb-ba9d7f7d2e5da7f888c9530ce65b438c.scn" ]
+source_file="res://Models/Rat1/rat.dae"
+dest_files=[ "res://.import/rat.dae-6f995805ce63bca792f4afbc507aa931.scn" ]
 
 [params]
 

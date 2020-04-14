@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/rat.glb-88ba1b73bf8e9904d29f1e6e8ba2af3a.scn"
+path="res://.import/labyrinth.dae-8539bc542504f00a1cd3124da2ad2a17.scn"
 
 [deps]
 
-source_file="res://Models/rat.glb"
-dest_files=[ "res://.import/rat.glb-88ba1b73bf8e9904d29f1e6e8ba2af3a.scn" ]
+source_file="res://Models/Labyrinth/labyrinth.dae"
+dest_files=[ "res://.import/labyrinth.dae-8539bc542504f00a1cd3124da2ad2a17.scn" ]
 
 [params]
 
