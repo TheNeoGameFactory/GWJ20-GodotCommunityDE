@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Models/labyrinth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/rat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sounds/LabRat.ogg" type="AudioStream" id=3]
 
 [node name="Spatial" type="Spatial"]
 
@@ -19,3 +20,7 @@ transform = Transform( 0.680951, -0.616035, 0.395988, 0, 0.540725, 0.8412, -0.73
 visible = false
 light_color = Color( 1, 0, 1, 1 )
 light_energy = 4.17
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
