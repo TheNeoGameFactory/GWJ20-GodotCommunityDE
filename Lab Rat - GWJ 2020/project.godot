@@ -16,10 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Lab Rat - GWJ 2020"
-<<<<<<< HEAD
 run/main_scene="res://Scenes/Menus/HauptMenu/HauptMenu.tscn"
-=======
->>>>>>> musik
 config/icon="res://icon.png"
 
 [autoload]
