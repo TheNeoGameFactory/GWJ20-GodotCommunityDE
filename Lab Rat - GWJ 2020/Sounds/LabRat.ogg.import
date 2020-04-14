@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LabRat.ogg-af52454e933ce4a971830731101be1c5.oggstr"
+
+[deps]
+
+source_file="res://Sounds/LabRat.ogg"
+dest_files=[ "res://.import/LabRat.ogg-af52454e933ce4a971830731101be1c5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
