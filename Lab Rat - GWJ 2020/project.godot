@@ -16,7 +16,10 @@ _global_script_class_icons={
 [application]
 
 config/name="Lab Rat - GWJ 2020"
+<<<<<<< HEAD
 run/main_scene="res://Scenes/Menus/HauptMenu/HauptMenu.tscn"
+=======
+>>>>>>> musik
 config/icon="res://icon.png"
 
 [autoload]
@@ -38,5 +41,4 @@ key_A={
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"
