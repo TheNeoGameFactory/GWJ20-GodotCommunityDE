@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/terrain.glb-dfd3a1462340275d2135260991ef2cbe.scn"
+path="res://.import/rat.dae-01db38ec41f543165ef3693c82019546.scn"
 
 [deps]
 
-source_file="res://Models/terrain.glb"
-dest_files=[ "res://.import/terrain.glb-dfd3a1462340275d2135260991ef2cbe.scn" ]
+source_file="res://Models/rat.dae"
+dest_files=[ "res://.import/rat.dae-01db38ec41f543165ef3693c82019546.scn" ]
 
 [params]
 

@@ -1,50 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Models/rat.tscn" type="PackedScene" id=1]
-
-[sub_resource type="PlaneMesh" id=1]
-
-[sub_resource type="BoxShape" id=7]
-
-[sub_resource type="CubeMesh" id=4]
-
-[sub_resource type="BoxShape" id=5]
+[ext_resource path="res://Scenes/rat.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Models/labyrinth.tscn" type="PackedScene" id=2]
 
 [node name="Spatial" type="Spatial"]
 
 [node name="rat" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.465584, 0, -0.885004, 0, 1, 0, 0.885004, 0, 0.465584, -5.87587, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87587, 0, -2.24996 )
 
 [node name="Camera" type="Camera" parent="rat"]
-transform = Transform( -1.34558e-07, 0.5638, -0.825911, 9.18547e-08, 0.825911, 0.5638, 1, 0, -1.62921e-07, -8.72906, 7.02191, 0 )
+transform = Transform( -3.18852e-08, 0.92879, -0.370606, 1.32152e-07, 0.370606, 0.92879, 1, -1.93614e-08, -1.34558e-07, -4, 10, 0 )
+current = true
 
-[node name="boden" type="StaticBody" parent="."]
-
-[node name="MeshInstance" type="MeshInstance" parent="boden"]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="boden"]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 0 )
-shape = SubResource( 7 )
-
-[node name="test_wand" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 5, 4.87786, 1.06552, 0 )
-
-[node name="MeshInstance" type="MeshInstance" parent="test_wand"]
-mesh = SubResource( 4 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="test_wand"]
-shape = SubResource( 5 )
-
-[node name="test_wand2" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 5, -1.85473, 1.06552, 0 )
-
-[node name="MeshInstance" type="MeshInstance" parent="test_wand2"]
-mesh = SubResource( 4 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="test_wand2"]
-shape = SubResource( 5 )
+[node name="labyrinth" parent="." instance=ExtResource( 2 )]
