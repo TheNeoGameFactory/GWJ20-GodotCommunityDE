@@ -2,7 +2,7 @@ extends Spatial
 
 #statt der Camera alleine dreht sich dieses Spatial, das die Position "verkörpert" an der die Ratte stehen würde. So ist es einfacher die Rotation zu smoothen
 
-export var speed = 10
+
 export var rotation_speed = 100
 export var smooth_winkel = 30 #winkel zwischen Ratte und Camera, ab der die Dreh-Geschwindigkeit abnimmt, damit die Drehung natürlicher ist
 
