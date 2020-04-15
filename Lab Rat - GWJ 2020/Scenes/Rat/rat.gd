@@ -3,8 +3,6 @@ extends KinematicBody
 var speed = 5
 
 var rotation_speed = 2.5
-
-
 func _physics_process(delta):
 	var move = Vector3(0,-1,0)
 	if Input.is_action_pressed("ui_up"):
