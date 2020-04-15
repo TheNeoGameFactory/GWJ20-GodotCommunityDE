@@ -1,7 +1,7 @@
 extends MarginContainer
 
 
-var labyrinth = "res://Scenes/Level/grundgerüst.tscn"
+export (Resource) var labyrinth
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,4 +16,4 @@ func _ready():
 
 
 func _on_NewGame_button_down():
-	get_tree().change_scene(labyrinth)
+	get_tree().change_scene(labyrinth.resource_path)
