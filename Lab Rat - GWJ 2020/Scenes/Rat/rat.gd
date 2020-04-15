@@ -1,6 +1,7 @@
 extends KinematicBody
 
 var speed = 5
+var rotation_speed = 2
 
 func _physics_process(delta):
 	var move = Vector3(0,-1,0)
@@ -9,9 +10,9 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("ui_down"):
 		move.x += -1
 	if Input.is_action_pressed("ui_right"):
-		self.rotation.y -= 1 * delta
+		self.rotation.y -= rotation_speed * delta
 	elif Input.is_action_pressed("ui_left"):
-		self.rotation.y += 1 * delta
+		self.rotation.y += rotation_speed * delta
 
 	move = move.rotated(Vector3(0,1,0).normalized(),rotation.y)
 	move = move_and_slide(move*speed, Vector3(0,1,0))

@@ -8,7 +8,8 @@
 
 
 [sub_resource type="CapsuleShape" id=1]
-height = 1.18673
+radius = 1.09333
+height = 3.0735
 
 [sub_resource type="ArrayMesh" id=2]
 surfaces/0 = {
@@ -55,7 +56,7 @@ surfaces/2 = {
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( -1.62921e-07, 0, -1, 0, 0.3, 0, 1, 0, -1.62921e-07, 0.466992, 0.297101, -0.00860202 )
+transform = Transform( -1.62921e-07, 0, -1, 0, 0.3, 0, 1, 0, -1.62921e-07, 0.639114, 0.297101, -0.00860202 )
 shape = SubResource( 1 )
 
 [node name="rat" type="Spatial" parent="."]
