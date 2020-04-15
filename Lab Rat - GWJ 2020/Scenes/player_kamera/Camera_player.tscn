@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/player_kamera/Camera_player.gd" type="Script" id=1]
+
+[node name="Camera_player" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1.62921e-07, 0.788011, -0.615661, 0, 0.615661, 0.788011, 1, 1.28383e-07, -1.00304e-07, -6, 6, 0 )
+current = true
