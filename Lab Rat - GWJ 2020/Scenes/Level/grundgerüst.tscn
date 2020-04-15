@@ -8,7 +8,9 @@
 [node name="Spatial" type="Spatial"]
 
 [node name="Camera_player" parent="." instance=ExtResource( 4 )]
+
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0199528, -3.8147e-06, -0.0360804 )
+
 
 [node name="rat" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
