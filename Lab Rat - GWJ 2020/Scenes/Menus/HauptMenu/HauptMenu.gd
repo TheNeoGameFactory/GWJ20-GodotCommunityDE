@@ -1,7 +1,7 @@
 extends MarginContainer
 
 
-var labyrinth = "res://Scenes/grundgerüst.tscn"
+var labyrinth = "res://Scenes/Level/grundgerüst.tscn"
 
 
 # Called when the node enters the scene tree for the first time.
