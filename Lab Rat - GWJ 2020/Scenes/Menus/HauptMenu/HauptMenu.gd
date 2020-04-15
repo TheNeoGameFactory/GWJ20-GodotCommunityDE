@@ -1,7 +1,8 @@
 extends MarginContainer
 
 
-export (Resource) var labyrinth
+
+export (Resource) var labyrinth 
 
 
 # Called when the node enters the scene tree for the first time.
