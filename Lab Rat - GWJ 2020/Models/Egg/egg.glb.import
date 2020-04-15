@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/terrain.glb-dfd3a1462340275d2135260991ef2cbe.scn"
+path="res://.import/egg.glb-e9f15840d1e168a73de897ea12c4e16b.scn"
 
 [deps]
 
-source_file="res://Models/terrain.glb"
-dest_files=[ "res://.import/terrain.glb-dfd3a1462340275d2135260991ef2cbe.scn" ]
+source_file="res://Models/Egg/egg.glb"
+dest_files=[ "res://.import/egg.glb-e9f15840d1e168a73de897ea12c4e16b.scn" ]
 
 [params]
 

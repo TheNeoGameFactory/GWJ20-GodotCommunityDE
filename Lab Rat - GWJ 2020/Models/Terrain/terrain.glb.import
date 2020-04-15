@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/labyrinth.dae-7f76bcb55bab61d45d03c83885589173.scn"
+path="res://.import/terrain.glb-7dda6aa31c630066b6305bac3c1d177e.scn"
 
 [deps]
 
-source_file="res://Models/labyrinth.dae"
-dest_files=[ "res://.import/labyrinth.dae-7f76bcb55bab61d45d03c83885589173.scn" ]
+source_file="res://Models/Terrain/terrain.glb"
+dest_files=[ "res://.import/terrain.glb-7dda6aa31c630066b6305bac3c1d177e.scn" ]
 
 [params]
 

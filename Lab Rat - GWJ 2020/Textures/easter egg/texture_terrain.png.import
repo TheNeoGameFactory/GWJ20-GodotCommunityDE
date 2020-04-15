@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/rat_texture.png-8cc2d649af553bc4aee79ebc68d84afd.s3tc.stex"
-path.etc2="res://.import/rat_texture.png-8cc2d649af553bc4aee79ebc68d84afd.etc2.stex"
+path.s3tc="res://.import/texture_terrain.png-b43b41fbc94022a0a2d0aebdfc5d0bb2.s3tc.stex"
+path.etc2="res://.import/texture_terrain.png-b43b41fbc94022a0a2d0aebdfc5d0bb2.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/rat_texture.png"
-dest_files=[ "res://.import/rat_texture.png-8cc2d649af553bc4aee79ebc68d84afd.s3tc.stex", "res://.import/rat_texture.png-8cc2d649af553bc4aee79ebc68d84afd.etc2.stex" ]
+source_file="res://Textures/easter egg/texture_terrain.png"
+dest_files=[ "res://.import/texture_terrain.png-b43b41fbc94022a0a2d0aebdfc5d0bb2.s3tc.stex", "res://.import/texture_terrain.png-b43b41fbc94022a0a2d0aebdfc5d0bb2.etc2.stex" ]
 
 [params]
 
