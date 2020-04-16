@@ -1,20 +1,26 @@
 extends Node
 
 
-var conami = ["up", "up", "down", "down", "left", "right", "left", "right", "B", "A"] 
+var konami = ["up", "up", "down", "down", "left", "right", "left", "right", "B", "A"] 
 var lastet_inputs =[]
+var easterEggStarted = false
+var timer = Timer.new()
+var easterEggScene = "res://Scenes/Easter Egg/easter egg.tscn"
 
 
 func _ready():
-	var timer = Timer.new()
 	timer.name = "timer"
 	add_child(timer)
+	timer.connect("timeout", self, "_timer_finish")
 
 func _timer_finish():
-	print("welcome to easter egg")
+	easterEggStarted = true
+	timer.stop()
+	get_tree().change_scene(easterEggScene)
+	
 
 func _input(event):
-	var timer = get_node("timer")
+	timer = get_node("timer")
 	var action = true
 	
 	if event.is_action_pressed("ui_up"):
@@ -32,14 +38,15 @@ func _input(event):
 			lastet_inputs.append("B")
 	else:
 		action = false
-		if timer.time_left == 0:
-			timer.start(140)
-			timer.connect("timeout", self, "_timer_finish")
+		if timer.time_left == 0 and get_tree().get_current_scene().get_name() != "HauptMenu" and easterEggStarted == false:
+			timer.start(4)
 	if action:
 		timer.stop()
 
-	if len(lastet_inputs) > len(conami):
+	if len(lastet_inputs) > len(konami):
 		lastet_inputs.pop_front()
-	if lastet_inputs == conami:
+	if lastet_inputs == konami:
 		print("yeah, yeah, yeah!!!")
+		lastet_inputs.clear()
+	
 

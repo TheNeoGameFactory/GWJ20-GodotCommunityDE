@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Labyrinth/labyrinth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Rat/rat.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Rat/rat2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/player_kamera/Camera_player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sounds/Musik/Game/Game Music.ogg" type="AudioStream" id=5]
 
 [node name="Spatial" type="Spatial"]
 
@@ -22,3 +23,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000620365, -0.363563, -0.007
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.893003, 0.443888, -0.07422, -0.354305, 0.795087, 0.492244, 0.277513, -0.413278, 0.867288, 6.90428, 11.1312, -12.6365 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
