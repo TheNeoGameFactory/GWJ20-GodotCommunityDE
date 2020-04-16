@@ -39,7 +39,7 @@ func _input(event):
 	else:
 		action = false
 		if timer.time_left == 0 and easterEggStarted == false:
-			timer.start(4)
+			timer.start(180)
 	if action:
 		timer.stop()
 
