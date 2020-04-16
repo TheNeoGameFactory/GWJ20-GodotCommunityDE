@@ -23,7 +23,8 @@ visible = false
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000620365, -0.363563, -0.00758934 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.893003, 0.443888, -0.07422, -0.354305, 0.795087, 0.492244, 0.277513, -0.413278, 0.867288, 6.90428, 11.1312, -12.6365 )
+transform = Transform( 0.924274, 0.0611146, 0.376805, -0.303632, 0.715954, 0.628664, -0.231355, -0.695467, 0.680294, 6.90428, 11.1312, -12.6365 )
+shadow_enabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
