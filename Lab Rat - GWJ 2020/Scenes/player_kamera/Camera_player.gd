@@ -16,5 +16,4 @@ export var player_path = "../rat"
 
 func _process(delta):
 	self.translation = get_node(player_path).translation #die position der Camera mit der position des spielers gleichsetzten
-	
 	rotation.y = rotation.y*0.94 + get_node(player_path).roty*0.06
