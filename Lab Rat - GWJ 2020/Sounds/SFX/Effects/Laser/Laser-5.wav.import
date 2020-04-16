@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Laser-5.wav-2c64524c82688fca948a59bff232199e.sample"
+
+[deps]
+
+source_file="res://Sounds/SFX/Effects/Laser/Laser-5.wav"
+dest_files=[ "res://.import/Laser-5.wav-2c64524c82688fca948a59bff232199e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
