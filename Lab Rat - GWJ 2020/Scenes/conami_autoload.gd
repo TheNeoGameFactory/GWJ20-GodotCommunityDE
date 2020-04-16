@@ -38,7 +38,7 @@ func _input(event):
 			lastet_inputs.append("B")
 	else:
 		action = false
-		if timer.time_left == 0 and get_tree().get_current_scene().get_name() != "HauptMenu" and get_tree().get_current_scene().get_name() != "splash_screen" and easterEggStarted == false:
+		if timer.time_left == 0 and easterEggStarted == false:
 			timer.start(4)
 	if action:
 		timer.stop()
