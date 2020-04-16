@@ -1,9 +1,9 @@
 extends KinematicBody
 
 var speed = 5
+
 var rotation_speed = 2.5
 var roty: float
-
 func _physics_process(delta):
 	if get_tree().get_current_scene().get_name() == "easter egg":
 		return
