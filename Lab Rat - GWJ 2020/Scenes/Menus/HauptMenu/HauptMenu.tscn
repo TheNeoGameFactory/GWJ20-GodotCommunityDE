@@ -5,7 +5,7 @@
 [ext_resource path="res://Textures/Menus/HauptMenu/label_continue.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Menus/HauptMenu/label_options.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Menus/HauptMenu/HauptMenu.gd" type="Script" id=5]
-[ext_resource path="res://Sounds/LabRat.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/Musik/Menu/LabRat.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Scenes/Level/grundgerüst.tscn" type="PackedScene" id=7]
 
 [node name="HauptMenu" type="MarginContainer"]
