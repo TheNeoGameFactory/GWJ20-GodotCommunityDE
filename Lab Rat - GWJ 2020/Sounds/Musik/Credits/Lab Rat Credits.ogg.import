@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Lab Rat Credits.ogg-3605373d78a32caf638da852e45b8ac8
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
