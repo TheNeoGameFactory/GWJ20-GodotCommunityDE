@@ -16,12 +16,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Lab Rat - GWJ 2020"
-run/main_scene="res://Scenes/Menus/HauptMenu/HauptMenu.tscn"
+run/main_scene="res://Scenes/splash_screen/splash_screen.tscn"
 config/icon="res://icon.png"
-
-[autoload]
-
-ConamiAutoload="*res://Scenes/conami_autoload.gd"
 
 [input]
 
