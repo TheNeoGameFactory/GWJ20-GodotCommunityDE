@@ -11,7 +11,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "GWJ_logo"
-length = 8.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("parts/logo_gwj:modulate")
 tracks/0/interp = 1
@@ -19,7 +19,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 8 ),
+"times": PoolRealArray( 0, 2.2, 5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -31,7 +31,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 2.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -51,7 +51,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "game_name"
-length = 12.0
+length = 8.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("parts/kartenhand:modulate")
 tracks/0/interp = 1
@@ -59,7 +59,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 2.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -71,7 +71,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3, 6.5, 8.4, 10, 12 ),
+"times": PoolRealArray( 0, 2.1, 3.9, 5.3, 7, 8.4 ),
 "transitions": PoolRealArray( 1, 3, 0.33, 0.435275, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, -1000 ), Vector2( 0, -1000 ), Vector2( 0, -500 ), Vector2( 0, -30 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
@@ -83,7 +83,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 3, 6.3, 8.4, 9.4, 10, 12 ),
+"times": PoolRealArray( 0, 2.1, 3.7, 5.3, 6.4, 7, 8.4 ),
 "transitions": PoolRealArray( 1, 0.225313, 1.23114, 0.517632, 1.51572, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, -8.0, 7.0, -2.0, 0.0, 0.0 ]
@@ -95,14 +95,14 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 3, 3.9, 10, 12 ),
+"times": PoolRealArray( 0, 2.1, 3, 7, 8.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=3]
-length = 7.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("parts/logo_com:modulate")
 tracks/0/interp = 1
@@ -110,7 +110,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 7 ),
+"times": PoolRealArray( 0, 2.1, 5 ),
 "transitions": PoolRealArray( 2.14355, 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -129,7 +129,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-length = 9.5
+length = 7.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("parts/logo_gwj:modulate")
 tracks/0/interp = 1
@@ -137,7 +137,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -149,7 +149,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3.2, 3.8 ),
+"times": PoolRealArray( 0, 2.2, 2.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -161,7 +161,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 4.8, 5.6, 6.2, 6.9, 7.5, 9 ),
+"times": PoolRealArray( 0, 3.3, 3.8, 4.3, 4.9, 5.4, 6.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 3, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -50, 5 ), Vector2( -95, 15 ), Vector2( -140, 32 ), Vector2( -180, 45 ), Vector2( -240, 0 ) ]
@@ -173,7 +173,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 4.8, 7.5, 9 ),
+"times": PoolRealArray( 0, 3.3, 5.4, 6.8 ),
 "transitions": PoolRealArray( 1, 1, 3, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, -25.0, 0.0 ]
@@ -185,7 +185,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 4.8, 5.7, 6.3, 6.9, 7.7, 9 ),
+"times": PoolRealArray( 0, 3.3, 3.9, 4.4, 4.9, 5.6, 6.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 3, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 50, 5 ), Vector2( 95, 15 ), Vector2( 140, 32 ), Vector2( 180, 45 ), Vector2( 240, 0 ) ]
@@ -197,7 +197,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 4.8, 7.7, 9 ),
+"times": PoolRealArray( 0, 3.3, 5.6, 6.8 ),
 "transitions": PoolRealArray( 1, 1, 3, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 25.0, 0.0 ]
@@ -209,7 +209,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 4.8, 5.6, 6.5, 7.3, 7.9, 8.5, 9 ),
+"times": PoolRealArray( 0, 3.3, 3.8, 4.6, 5.3, 5.8, 6.3, 6.8 ),
 "transitions": PoolRealArray( 1, 1, 1.86607, 0.287175, 2, 0.435275, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 3.0, -2.0, 0.0, -3.0, 2.0, 0.0 ]
@@ -221,7 +221,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 2.9, 3.9, 4.4 ),
+"times": PoolRealArray( 1.9, 2.9, 3.4 ),
 "transitions": PoolRealArray( 2.5, 0.297302, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 1200 ), Vector2( 0, 200 ), Vector2( 0, 0 ) ]
@@ -256,7 +256,7 @@ position = Vector2( 512.31, 296.717 )
 
 [node name="logo_com" type="Node2D" parent="parts"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 0, 0, 0, 0 )
 scale = Vector2( 0.9, 0.9 )
 
 [node name="Sprite" type="Sprite" parent="parts/logo_com"]
@@ -264,7 +264,7 @@ texture = ExtResource( 1 )
 
 [node name="logo_gwj" type="Node2D" parent="parts"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 0, 0, 0, 0 )
 
 [node name="ColorRect" type="ColorRect" parent="parts/logo_gwj"]
 margin_left = -2864.0
@@ -281,18 +281,17 @@ texture = ExtResource( 3 )
 
 [node name="kartenhand" type="Node2D" parent="parts"]
 visible = false
-position = Vector2( 0, 1118.38 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 1200 )
 scale = Vector2( 2.5, 2.5 )
 
 [node name="karte 1" type="Sprite" parent="parts/kartenhand"]
-position = Vector2( -240, 0 )
 texture = ExtResource( 5 )
 
 [node name="karte 2" type="Sprite" parent="parts/kartenhand"]
 texture = ExtResource( 4 )
 
 [node name="karte 3" type="Sprite" parent="parts/kartenhand"]
-position = Vector2( 240, 0 )
 texture = ExtResource( 6 )
 
 [node name="gamename" type="Node2D" parent="parts"]

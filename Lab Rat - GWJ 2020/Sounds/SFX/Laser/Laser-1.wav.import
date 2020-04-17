@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Laser-5.wav-2c64524c82688fca948a59bff232199e.sample"
+path="res://.import/Laser-1.wav-1137757560ed69568ba0b9e43c014017.sample"
 
 [deps]
 
-source_file="res://Sounds/SFX/Effects/Laser/Laser-5.wav"
-dest_files=[ "res://.import/Laser-5.wav-2c64524c82688fca948a59bff232199e.sample" ]
+source_file="res://Sounds/SFX/Laser/Laser-1.wav"
+dest_files=[ "res://.import/Laser-1.wav-1137757560ed69568ba0b9e43c014017.sample" ]
 
 [params]
 
