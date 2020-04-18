@@ -9,6 +9,7 @@ var easterEggCanStart=false
 var easterEggTimerStarted=false
 var timer = Timer.new()
 export (Resource) var easterEggScene
+var dukeFired=false
 
 
 
@@ -38,12 +39,22 @@ func _physics_process(delta):
 	move = move_and_slide(move*speed)
 	
 	if easterEggCanStart and not easterEggTimerStarted:
-		timer.start(4)
+		timer.start(140)
 		easterEggTimerStarted=true
+		dukeFired=false
 		
 	if easterEggTimerStarted and not easterEggCanStart:
 		timer.stop()
 		easterEggTimerStarted=false
+		dukeFired=false
+		
+	if timer.time_left<60 and easterEggTimerStarted and not dukeFired:
+		var duke_voice = get_node("../DukeVoice")
+		duke_voice.stream = load("res://Sounds/SFX/Speech/Easter Egg/Duke Nukem What are you waiting for.ogg")
+		duke_voice.volume_db = 3
+		duke_voice.play()
+		dukeFired=true
+		
 
 func _ready():
 	set_process_input(true)
