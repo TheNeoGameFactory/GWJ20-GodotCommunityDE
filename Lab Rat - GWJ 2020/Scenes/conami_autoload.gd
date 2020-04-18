@@ -6,6 +6,7 @@ var lastet_inputs =[]
 var konami_video
 	
 
+var pause: bool = false
 func _input(event):
 
 	
@@ -22,6 +23,11 @@ func _input(event):
 			lastet_inputs.append("A")
 		elif event.scancode == KEY_B:
 			lastet_inputs.append("B")
+	if get_tree().get_current_scene().get_name() == "grundgerüst":
+		if event is InputEventKey and event.is_action_released("escape"):
+			$"/root/grundgerüst/rat".set_physics_process(pause)
+			pause = !pause
+			$"/root/grundgerüst/Pausenmenü".visible = pause
 
 
 	if len(lastet_inputs) > len(konami):

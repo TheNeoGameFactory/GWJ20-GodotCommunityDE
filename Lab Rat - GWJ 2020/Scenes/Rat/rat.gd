@@ -12,7 +12,6 @@ var easterEggScene ="res://Scenes/Easter egg/easter egg.tscn"
 var dukeFired=false
 
 
-
 func _timer_finish():
 	get_tree().change_scene(easterEggScene)
 
@@ -57,7 +56,13 @@ func _physics_process(delta):
 
 
 func _ready():
-	set_process_input(true)
+	set_process_input(false)
+	set_physics_process(true)
 	timer.name = "timer"
 	add_child(timer)
 	timer.connect("timeout", self, "_timer_finish")
+
+func _on_Button_pressed():
+	set_physics_process(conami.pause)
+	conami.pause = !conami.pause
+	get_parent().get_node("Pausenmenü").visible = conami.pause
