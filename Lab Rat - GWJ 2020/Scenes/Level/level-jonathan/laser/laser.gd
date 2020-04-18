@@ -1,44 +1,58 @@
 extends Spatial
 
 
-export (int) var laenge = 1 
+
 export (Color) var farbe = Color(1,1,1,0.4)
-export (bool) var hide_when_used = false
 export (int) var laser_art = 1
 
-signal mouse_entered(art)
+var used = false
+var mission_doing
 
-# Called when the node enters the scene tree for the first time.
+signal wants_musik(laser_type)
+signal stops_musik(laser_type)
+
 func _ready():
-	self.connect("mouse_entered", get_node("../.."), "mouse_in_laser")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	$MeshInstance.mesh.mid_height = laenge
-	$Area/CollisionShape.scale.z = laenge
-	$sound_area/CollisionShape.shape.height = laenge
+	self.connect("wants_musik", get_node("../.."),"laser_wants_to_play_musik")
+	self.connect("stops_musik", get_node("../.."),"laser_wants_to_stop_musik")
 	var laser_mat = SpatialMaterial.new()
 	laser_mat.flags_transparent = true
 	laser_mat.albedo_color = farbe
-	$MeshInstance.set_surface_material(0,laser_mat)	
+	$MeshInstance.set_surface_material(0,laser_mat)
+	get_node("../..").possible_laser.append(laser_art)
 
+func _process(delta):
+	if mission_doing != get_node("../..").current_mission:
+		used = false
+		self.visible = true
+	mission_doing = get_node("../..").current_mission
 
 func _on_Area_body_entered(body):
-		emit_signal("mouse_entered", laser_art)
-		$Area/CollisionShape.disabled = true
-		$sound_area/CollisionShape.disabled = true
-		if hide_when_used:
-			self.hide()
+	
+	if body.get_parent().name == "rat" and not used:
+		get_node("../..").mission_archieved.append(laser_art)
+		print(get_node("../..").mission_to_do[len(get_node("../..").mission_archieved)-1])
+		if get_node("../..").mission_to_do[len(get_node("../..").mission_archieved)-1] == laser_art:
+			self.visible = false
+			used = true
+			emit_signal("stops_musik", laser_art)
+			get_node("../../rat/AnimationPlayer").play("linght_blink_green")
+		
+		else: 
+			get_node("../../rat/AnimationPlayer").play("linght_blink_red")
+			var lasers =  get_node("../..").possible_laser.duplicate()
+			get_node("../..").get_new_laser_config(get_node("../..").current_mission, lasers)
+			get_node("../..").mission_archieved = []
+			get_node("../..").play_laser_sounds(get_node("../..").mission_to_do)
+			get_node("../../").show_text_popup("ansagen/Popupfailed")
+			for laser in get_node("..").get_children():
+				laser.show()
 
 
 func _on_sound_area_body_entered(body):
-	if body.name == "rat":
-		get_node("../../laser_sounds/"+str(laser_art)).playing = true
-		get_node("../../AudioStreamPlayer").playing = false
+	if body.name == "rat" and not used:
+		emit_signal("wants_musik", laser_art)
 
 
 func _on_sound_area_body_exited(body):
-	if body.name == "rat":
-		get_node("../../laser_sounds/"+str(laser_art)).playing = false
-		get_node("../../AudioStreamPlayer").playing = true
+	if body.name == "rat" and not used:
+		emit_signal("stops_musik", laser_art)
