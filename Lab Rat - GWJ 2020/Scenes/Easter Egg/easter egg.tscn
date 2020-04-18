@@ -10,13 +10,13 @@
 [node name="terrain" parent="." instance=ExtResource( 1 )]
 
 [node name="egg" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064153, -0.0106805, -0.0032228, 0.0111561, 0.0614179, 0.0185326, 0, -0.0188108, 0.0623396, -17.4646, -1.5902, -11.5452 )
+transform = Transform( 0.121991, -0.0149726, -0.157778, 0.0246669, 0.198473, 0.000237545, 0.156556, -0.0196044, 0.122906, -7.27732, -1.21136, -2.98758 )
 
 [node name="rat" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.0162446, 0.119869, 0.47492, -0.110375, 0.463855, -0.113301, -0.477215, -0.103204, 0.0423718, -16.8964, -1.82452, -10.3859 )
+transform = Transform( 0.0920063, 0.13477, 0.462118, -0.110375, 0.463855, -0.113301, -0.468543, -0.0828057, 0.117435, -14.4121, -1.10562, -4.45537 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.306377, 0, 0.95191, 0, 1, 0, -0.95191, 0, -0.306377, -15.4941, -1.64829, -11.4545 )
+transform = Transform( -0.73814, 0.159014, -0.65564, 0.144025, 0.986564, 0.0771265, 0.659095, -0.0374982, -0.751124, -14.721, -0.862572, -5.47725 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
