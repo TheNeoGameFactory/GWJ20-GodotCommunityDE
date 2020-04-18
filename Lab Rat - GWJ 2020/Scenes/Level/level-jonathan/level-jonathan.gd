@@ -4,55 +4,86 @@ extends Spatial
 var laser_count = 0
 
 var mission_archieved = [] #hier wird gespeichert, welche laser schon "geöfnet" wurden
+var last_laser_went_into = 0
+var current_mission = 1
 
-var mission1 = []
+var mission_to_do = []
 
-var rng = RandomNumberGenerator.new()
+var possible_laser = []
 
+
+var gerade_vorspiel = false
+var takt_im_vorspiel = 1
+var laenge_des_vorspiels = 1
 
 func _ready():
-	rng.randomize()
-	mission1.append(rng.randi_range(1, 6))
-	$ansagen/Popup_start.popup()
-	$ansagen/Tween.interpolate_property($ansagen/Popup_start/ansage_start, "percent_visible", 0, 1, 7, Tween.TRANS_LINEAR, Tween.EASE_IN)
-	$ansagen/Tween.start()
-	get_node("laser_sounds/"+str(mission1[0])).playing = true
-	$rat.set_physics_process(false)
-
-
+	show_text_popup("ansagen/Popup_mission1")
+	var lasers =  possible_laser.duplicate()
+	get_new_laser_config(current_mission,lasers)
+	play_laser_sounds(mission_to_do)
+	
 
 func _process(delta):
-	pass
-
-
-func mouse_in_laser(laser_art):
-	laser_count += 1
-	if mission1[mission_archieved.size()] == laser_art:
-		$rat/AnimationPlayer.play("linght_blink_green")
-		mission_archieved.append(laser_art)
-	else:
-		$rat/AnimationPlayer.play("linght_blink_red")
-		mission1 = []
-		mission1.append(rng.randi_range(1, 6))
-		mission_archieved = []
-
-
-func _on_Tween_tween_completed(object, key):
-	if object.get_parent().get_class() == "Popup":
-		object.get_parent().popup_exclusive = false
-		object.get_parent().popup()
-		$rat.set_physics_process(true)
-		get_node("laser_sounds/"+str(mission1[0])).playing = false
-		$AudioStreamPlayer.playing = true
-
-
-func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == "linght_blink_green":
-		$ansagen/Popup_start.hide()
-		$ansagen/Popup_mission2.popup()
-		$ansagen/Tween.interpolate_property($ansagen/Popup_mission2/ansage_start, "percent_visible", 0, 1, 7, Tween.TRANS_LINEAR, Tween.EASE_IN)
-		$ansagen/Tween.start()
-
-
-func not_managed_to_do(mission):
+	#print(mission_archieved)
+	#print(mission_to_do)
 	
+	if mission_archieved == mission_to_do:
+		current_mission+=1
+		var lasers =  possible_laser.duplicate()
+		get_new_laser_config(current_mission,lasers)
+		mission_archieved = []
+		get_node("ansagen/Popup_mission"+str(current_mission)).popup()
+		play_laser_sounds(mission_to_do)
+		
+
+
+func laser_wants_to_play_musik(laser_type):
+	if not gerade_vorspiel:
+		get_node("laser_sounds/"+str(laser_type)).playing = true
+		$AudioStreamPlayer.stream_paused = true
+
+func laser_wants_to_stop_musik(laser_type):
+	get_node("laser_sounds/"+str(laser_type)).playing = false
+	if not gerade_vorspiel:
+		$AudioStreamPlayer.stream_paused = false
+
+
+func get_new_laser_config(anzahl, laser_to_use):
+	laser_to_use.shuffle()
+	laser_to_use.resize(anzahl)
+	mission_to_do =  laser_to_use
+
+
+func play_laser_sounds(sounds):
+	$AudioStreamPlayer.stream_paused = true
+	gerade_vorspiel = true
+	for sound_to_stop in get_node("laser_sounds").get_children():
+		sound_to_stop.playing = false
+	print("vorspiel gestartet")
+	laenge_des_vorspiels = len(sounds)
+	takt_im_vorspiel = 0
+	#get_node("laser_sounds_without_loop/"+str(sounds[0])).playing = true
+	get_node("laser_sounds_without_loop/Time_laser_needs").start()
+
+
+
+
+
+func _on_Time_laser_needs_timeout():
+	get_node("laser_sounds_without_loop/"+str(mission_to_do[takt_im_vorspiel-1])).playing = false
+	if gerade_vorspiel:
+		print("nexter laser")
+		if takt_im_vorspiel == laenge_des_vorspiels:
+			$AudioStreamPlayer.stream_paused = false
+			print("vorspiel zu ende")
+			gerade_vorspiel = false
+		else:
+			takt_im_vorspiel += 1
+			get_node("laser_sounds_without_loop/"+str(mission_to_do[takt_im_vorspiel-1])).playing = true
+			get_node("laser_sounds_without_loop/Time_laser_needs").start()
+
+
+func show_text_popup(popup_path):
+	get_node(popup_path).popup()
+	get_node("ansagen/Tween").interpolate_property(get_node(popup_path+"/ansage_start"), "percent_visible", 0.0, 1.0, 7)
+	get_node("ansagen/Tween").start()
