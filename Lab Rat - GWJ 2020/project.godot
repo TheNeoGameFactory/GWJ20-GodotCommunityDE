@@ -21,6 +21,14 @@ boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
+[autoload]
+
+conami="*res://Scenes/conami_autoload.gd"
+
+[display]
+
+window/dpi/allow_hidpi=true
+
 [input]
 
 ui_left={
@@ -84,5 +92,5 @@ konami_right={
 
 [rendering]
 
-environment/default_clear_color=Color( 0.2, 0.196078, 0.196078, 1 )
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
