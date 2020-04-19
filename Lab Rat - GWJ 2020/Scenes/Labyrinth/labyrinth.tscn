@@ -7,6 +7,10 @@ extents = Vector3( 29.6077, 1, 29.6558 )
 
 [node name="labyrinth" instance=ExtResource( 1 )]
 
+[node name="Level_" parent="." index="0"]
+cast_shadow = 2
+use_in_baked_light = true
+
 [node name="CollisionShape" type="CollisionShape" parent="Level_/static_collision" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 shape = SubResource( 1 )

@@ -3,8 +3,6 @@
 [ext_resource path="res://Scenes/Rat/rat.gd" type="Script" id=1]
 [ext_resource path="res://Models/Rat2/rat.glb" type="PackedScene" id=2]
 
-
-
 [sub_resource type="CylinderShape" id=1]
 radius = 0.7
 height = 3.8557
