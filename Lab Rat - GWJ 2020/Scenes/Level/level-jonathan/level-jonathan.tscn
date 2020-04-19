@@ -74,11 +74,14 @@ tracks/1/keys = {
 [node name="level-jonathan" type="Spatial"]
 script = ExtResource( 8 )
 
+[node name="rat_start_pos" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.650367, 0, -1.72112 )
+
 [node name="Camera_player" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0199528, -3.8147e-06, -0.0360804 )
 
 [node name="rat" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5358, 0, -2.11543 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4861, 0, -2.11543 )
 
 [node name="StaticBody" type="StaticBody" parent="rat"]
 collision_layer = 2
@@ -119,108 +122,33 @@ script = ExtResource( 6 )
 [node name="lasers" type="Spatial" parent="."]
 
 [node name="laser1" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.19, 0.2, 17.456 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 18.4589, 0.2, 9.75886 )
 farbe = Color( 0, 0, 1, 0.4 )
 
 [node name="laser2" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.194, 0.2, 11.704 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.68307, 0.2, 18.1898 )
 farbe = Color( 1, 0, 0, 0.4 )
 laser_art = 2
 
 [node name="laser3" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3663, 0.2, 5.56548 )
-farbe = Color( 1, 0, 0, 0.4 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -18.3831, 0.2, 11.3453 )
+farbe = Color( 0, 1, 0, 0.4 )
 laser_art = 3
 
 [node name="laser4" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.19, 0.2, -0.033 )
-farbe = Color( 1, 0, 0, 0.4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0569, 0.2, -18.4966 )
+farbe = Color( 1, 1, 0, 0.4 )
 laser_art = 4
 
 [node name="laser5" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.51, 0.200732, -10.1017 )
-farbe = Color( 1, 0, 0, 0.4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69936, 0.200732, 2.14684 )
+farbe = Color( 1, 0, 1, 0.4 )
 laser_art = 6
 
 [node name="laser6" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5154, 0.2, -5.15567 )
-farbe = Color( 1, 0, 0, 0.4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5848, 0.2, -17.9572 )
+farbe = Color( 0, 1, 1, 0.4 )
 laser_art = 5
-
-[node name="ansagen" type="Node2D" parent="."]
-
-[node name="Tween" type="Tween" parent="ansagen"]
-
-[node name="Popup_mission1" type="Popup" parent="ansagen"]
-visible = true
-margin_right = 120.0
-margin_bottom = 107.0
-
-[node name="ansage_start" type="RichTextLabel" parent="ansagen/Popup_mission1"]
-margin_left = 288.337
-margin_top = 198.741
-margin_right = 652.337
-margin_bottom = 363.741
-text = "Hey little rat,
-I have a new mission for you...
-
-Hear I have a sound for you. Can you hear it?
-Yeah, it is a LASER. Find the laser with this sound for me!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Popup_mission2" type="Popup" parent="ansagen"]
-margin_right = 120.0
-margin_bottom = 107.0
-
-[node name="ansage_start" type="RichTextLabel" parent="ansagen/Popup_mission2"]
-margin_right = 364.0
-margin_bottom = 165.0
-text = "Okay...
-You could have been faster...
-
-But, haha, you're only a stupid little rat.
-
-A rat won't be able to make my next mission:
-2 sounds; you have to find the lasers in the right order.
-
-Good luck"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Popup_mission3" type="Popup" parent="ansagen"]
-margin_right = 120.0
-margin_bottom = 107.0
-
-[node name="ansage_start" type="RichTextLabel" parent="ansagen/Popup_mission3"]
-margin_right = 364.0
-margin_bottom = 165.0
-text = "Now it's getting harder.
-
-I'll play three sounds for you. 
-
-You'll never make it!!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Popupfailed" type="Popup" parent="ansagen"]
-margin_right = 120.0
-margin_bottom = 107.0
-
-[node name="ansage_start" type="RichTextLabel" parent="ansagen/Popupfailed"]
-margin_right = 364.0
-margin_bottom = 165.0
-text = "Oooh. Stupid rat!!! 
-
-I'll play a new sound for you.
-
-Hear to it more carefully now!!!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="laser_sounds" type="Spatial" parent="."]
 
@@ -263,6 +191,100 @@ stream = ExtResource( 11 )
 stream = ExtResource( 13 )
 
 [node name="Time_laser_needs" type="Timer" parent="laser_sounds_without_loop"]
-wait_time = 3.5
+wait_time = 5.0
 one_shot = true
+
+[node name="ansagen" type="CenterContainer" parent="."]
+margin_right = 1026.0
+margin_bottom = 602.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup_mission1" type="Popup" parent="ansagen"]
+margin_left = 513.0
+margin_top = 301.0
+margin_right = 513.0
+margin_bottom = 301.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_mission1"]
+margin_left = -150.0
+margin_top = -74.0
+margin_right = 150.0
+margin_bottom = 71.0
+text = "Hey little rat,
+I have a new mission for you...
+
+Hear I have a sound for you. Can you hear it?
+Yeah, it is a LASER.
+Find the laser with this sound for me!
+
+[Klick to close this message]"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup_mission2" type="Popup" parent="ansagen"]
+margin_left = 513.0
+margin_top = 301.0
+margin_right = 513.0
+margin_bottom = 301.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_mission2"]
+margin_left = -175.0
+margin_top = -80.0
+margin_right = 186.0
+margin_bottom = 83.0
+text = "Okay...
+
+You could have been faster...
+
+But, haha, you're only a stupid little rat.
+
+A rat won't be able to make my next mission:
+2 sounds; you have to find the lasers in the right order.
+
+Good luck"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup_mission3" type="Popup" parent="ansagen"]
+margin_left = 513.0
+margin_top = 301.0
+margin_right = 513.0
+margin_bottom = 301.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_mission3"]
+margin_left = -100.0
+margin_top = -70.0
+margin_right = 111.0
+margin_bottom = 65.0
+text = "Yeah! That was ok.
+
+But now it's getting harder.
+
+I'll play three sounds for you. 
+
+You'll never make it!!"
+
+[node name="Popup_failed" type="Popup" parent="ansagen"]
+margin_left = 513.0
+margin_top = 301.0
+margin_right = 513.0
+margin_bottom = 301.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_failed"]
+margin_left = -100.0
+margin_top = -35.0
+margin_right = 112.0
+margin_bottom = 52.0
+text = "Oooh. Stupid rat!!! 
+
+I'll play a new sound for you.
+
+Hear to it more carefully now!!!"
+
+[node name="Tween" type="Tween" parent="ansagen"]
+[connection signal="animation_finished" from="rat/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="timeout" from="laser_sounds_without_loop/Time_laser_needs" to="." method="_on_Time_laser_needs_timeout"]

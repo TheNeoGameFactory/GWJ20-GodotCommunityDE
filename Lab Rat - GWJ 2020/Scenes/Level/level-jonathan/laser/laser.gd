@@ -43,9 +43,10 @@ func _on_Area_body_entered(body):
 			get_node("../..").get_new_laser_config(get_node("../..").current_mission, lasers)
 			get_node("../..").mission_archieved = []
 			get_node("../..").play_laser_sounds(get_node("../..").mission_to_do)
-			get_node("../../").show_text_popup("ansagen/Popupfailed")
+			get_node("../../").show_text_popup("ansagen/Popup_failed")
 			for laser in get_node("..").get_children():
 				laser.show()
+				laser.used = false
 
 
 func _on_sound_area_body_entered(body):

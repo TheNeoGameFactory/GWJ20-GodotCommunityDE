@@ -6,6 +6,7 @@ var laser_count = 0
 var mission_archieved = [] #hier wird gespeichert, welche laser schon "geöfnet" wurden
 var last_laser_went_into = 0
 var current_mission = 1
+var highest_mission = 1
 
 var mission_to_do = []
 
@@ -17,6 +18,7 @@ var takt_im_vorspiel = 1
 var laenge_des_vorspiels = 1
 
 func _ready():
+	$rat.transform = $rat_start_pos.transform
 	show_text_popup("ansagen/Popup_mission1")
 	var lasers =  possible_laser.duplicate()
 	get_new_laser_config(current_mission,lasers)
@@ -24,17 +26,18 @@ func _ready():
 	
 
 func _process(delta):
-	#print(mission_archieved)
-	#print(mission_to_do)
-	
+	$ansagen.rect_size = get_viewport().size
+	if gerade_vorspiel:
+		$rat.set_physics_process(false)
+	else: $rat.set_physics_process(true)
 	if mission_archieved == mission_to_do:
 		current_mission+=1
-		var lasers =  possible_laser.duplicate()
-		get_new_laser_config(current_mission,lasers)
-		mission_archieved = []
-		get_node("ansagen/Popup_mission"+str(current_mission)).popup()
-		play_laser_sounds(mission_to_do)
-		
+		if not current_mission > highest_mission:
+			var lasers =  possible_laser.duplicate()
+			get_new_laser_config(current_mission,lasers)
+			mission_archieved = []
+			show_text_popup("ansagen/Popup_mission"+str(current_mission))
+			play_laser_sounds(mission_to_do)
 
 
 func laser_wants_to_play_musik(laser_type):
@@ -51,7 +54,7 @@ func laser_wants_to_stop_musik(laser_type):
 func get_new_laser_config(anzahl, laser_to_use):
 	laser_to_use.shuffle()
 	laser_to_use.resize(anzahl)
-	mission_to_do =  laser_to_use
+	mission_to_do = laser_to_use
 
 
 func play_laser_sounds(sounds):
@@ -85,5 +88,13 @@ func _on_Time_laser_needs_timeout():
 
 func show_text_popup(popup_path):
 	get_node(popup_path).popup()
-	get_node("ansagen/Tween").interpolate_property(get_node(popup_path+"/ansage_start"), "percent_visible", 0.0, 1.0, 7)
+	get_node("ansagen/Tween").interpolate_property(get_node(popup_path+"/RichTextLabel"), "percent_visible", 0.0, 1.0, 7)
 	get_node("ansagen/Tween").start()
+	print("text wird animiert")
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if current_mission > highest_mission:
+		get_tree().change_scene("res://Scenes/Menus/HauptMenu/HauptMenu.tscn")
+	if anim_name == "linght_blink_red" or (anim_name == "linght_blink_green" and mission_archieved == []):
+		$rat.transform = $rat_start_pos.transform
