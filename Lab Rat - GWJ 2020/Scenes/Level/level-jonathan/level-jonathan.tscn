@@ -15,61 +15,58 @@
 [ext_resource path="res://Sounds/SFX/Laser/Laser-6.wav" type="AudioStream" id=13]
 [ext_resource path="res://Sounds/SFX/Laser/Laser-3.wav" type="AudioStream" id=14]
 
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 1.03165, 0.667739, 0.329303 )
-
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "linght_blink_green"
 tracks/0/type = "value"
-tracks/0/path = NodePath("OmniLight:light_color")
+tracks/0/path = NodePath("OmniLight:light_energy")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 0, 0, 1 ), Color( 0, 1, 0, 1 ), Color( 0, 1, 0, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("OmniLight:light_energy")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 0.6, 0.7, 1 ),
 "transitions": PoolRealArray( 2, 1, 0.129408, 1 ),
 "update": 0,
 "values": [ 0.0, 16.0, 16.0, 0.0 ]
 }
-
-[sub_resource type="Animation" id=3]
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("OmniLight:light_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 0.180392, 0, 1 ), Color( 1, 0.180392, 0, 1 ) ]
-}
 tracks/1/type = "value"
-tracks/1/path = NodePath("OmniLight:light_energy")
+tracks/1/path = NodePath("OmniLight:light_color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 0, 1, 0, 1 ), Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("OmniLight:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 6.27668, 1, 0.101532, 1 ),
 "update": 0,
 "values": [ 0.0, 16.0, 16.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OmniLight:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.180392, 0, 1 ), Color( 1, 0.180392, 0, 1 ) ]
 }
 
 [node name="level-jonathan" type="Spatial"]
@@ -84,25 +81,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0199528, -3.8147e-06, -0.03
 [node name="rat" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4861, 0, -2.11543 )
 
-[node name="StaticBody" type="StaticBody" parent="rat"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="laser_collision" type="CollisionShape" parent="rat/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.250823, 0.527562, 0 )
-shape = SubResource( 1 )
-
 [node name="OmniLight" type="OmniLight" parent="rat"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.19873, 0 )
-light_color = Color( 1, 0, 0, 1 )
+light_color = Color( 1, 0.180392, 0, 1 )
 light_energy = 0.0
 shadow_enabled = true
 omni_range = 20.0
 omni_attenuation = 0.63728
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="rat"]
-anims/linght_blink_green = SubResource( 2 )
-anims/linght_blink_red = SubResource( 3 )
+anims/linght_blink_green = SubResource( 1 )
+anims/linght_blink_red = SubResource( 2 )
 
 [node name="labyrinth" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0069828, -0.3695, -0.00864792 )
@@ -139,30 +128,84 @@ __meta__ = {
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 18.0996, 0.2, 9.75886 )
 farbe = Color( 0, 0, 1, 0.4 )
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lasers/laser1"]
+stream = ExtResource( 12 )
+unit_db = 6.0
+unit_size = 6.0
+max_db = 6.0
+autoplay = true
+emission_angle_enabled = true
+doppler_tracking = 2
+
 [node name="laser2" parent="lasers" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.68307, 0.2, 17.998 )
 farbe = Color( 1, 0, 0, 0.4 )
 laser_art = 2
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lasers/laser2"]
+stream = ExtResource( 10 )
+unit_db = 6.0
+unit_size = 6.0
+max_db = 6.0
+autoplay = true
+emission_angle_enabled = true
+doppler_tracking = 2
 
 [node name="laser3" parent="lasers" instance=ExtResource( 7 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -17.945, 0.2, 11.3453 )
 farbe = Color( 0, 1, 0, 0.4 )
 laser_art = 3
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lasers/laser3"]
+stream = ExtResource( 14 )
+unit_db = 6.0
+unit_size = 6.0
+max_db = 6.0
+autoplay = true
+emission_angle_enabled = true
+doppler_tracking = 2
+
 [node name="laser4" parent="lasers" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0569, 0.2, -17.9621 )
 farbe = Color( 1, 1, 0, 0.4 )
 laser_art = 4
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lasers/laser4"]
+stream = ExtResource( 9 )
+unit_db = 6.0
+unit_size = 6.0
+max_db = 6.0
+autoplay = true
+emission_angle_enabled = true
+doppler_tracking = 2
 
 [node name="laser5" parent="lasers" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69936, 0.200732, 1.99822 )
 farbe = Color( 1, 0, 1, 0.4 )
 laser_art = 6
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lasers/laser5"]
+stream = ExtResource( 11 )
+unit_db = 6.0
+unit_size = 6.0
+max_db = 6.0
+autoplay = true
+emission_angle_enabled = true
+doppler_tracking = 2
+
 [node name="laser6" parent="lasers" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5848, 0.2, -17.9572 )
 farbe = Color( 0, 1, 1, 0.4 )
 laser_art = 5
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lasers/laser6"]
+stream = ExtResource( 13 )
+unit_db = 6.0
+unit_size = 6.0
+max_db = 6.0
+autoplay = true
+emission_angle_enabled = true
+doppler_tracking = 2
 
 [node name="laser_sounds" type="Spatial" parent="."]
 
