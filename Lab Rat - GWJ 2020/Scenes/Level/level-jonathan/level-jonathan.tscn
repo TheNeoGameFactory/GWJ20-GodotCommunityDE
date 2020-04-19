@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Labyrinth/labyrinth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Rat/rat.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sounds/Musik/Game/LabRat.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Scenes/player_kamera/Camera_player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Videos/KonamiCode/KonamiCode0001-0400.ogv" type="VideoStream" id=5]
 [ext_resource path="res://Scenes/conami_autoload.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/Level/level-jonathan/laser/laser.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Level/level-jonathan/level-jonathan.gd" type="Script" id=8]
@@ -118,6 +119,19 @@ autoplay = true
 
 [node name="easter_eggs_script" type="Node" parent="."]
 script = ExtResource( 6 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="easter_eggs_script"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 228.0
+margin_top = 21.0
+margin_right = -237.0
+margin_bottom = -20.0
+stream = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="lasers" type="Spatial" parent="."]
 
@@ -304,6 +318,8 @@ text = "Ahh. You need a hint?
 I'll play the sounds again"
 
 [node name="Tween" type="Tween" parent="ansagen"]
+
+[node name="DukeVoice" type="AudioStreamPlayer" parent="."]
 [connection signal="animation_finished" from="rat/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="timeout" from="laser_sounds_without_loop/Time_laser_needs" to="." method="_on_Time_laser_needs_timeout"]
 [connection signal="tween_completed" from="ansagen/Tween" to="." method="_on_Tween_tween_completed"]
