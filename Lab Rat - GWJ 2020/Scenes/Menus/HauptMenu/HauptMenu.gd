@@ -2,7 +2,7 @@ extends MarginContainer
 
 
 
-export (Resource) var labyrinth 
+var startGame = "res://Scenes/Level/level-jonathan/level-jonathan.tscn"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_NewGame_button_down():
-	get_tree().change_scene(labyrinth.resource_path)
+	get_tree().change_scene(startGame)
