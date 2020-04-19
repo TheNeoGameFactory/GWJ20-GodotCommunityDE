@@ -6,7 +6,7 @@ var laser_count = 0
 var mission_archieved = [] #hier wird gespeichert, welche laser schon "geöfnet" wurden
 var last_laser_went_into = 0
 var current_mission = 1
-var highest_mission = 1
+var highest_mission = 3
 
 var mission_to_do = []
 
