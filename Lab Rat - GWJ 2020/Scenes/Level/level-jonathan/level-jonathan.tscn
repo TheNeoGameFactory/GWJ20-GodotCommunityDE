@@ -206,20 +206,19 @@ margin_left = 513.0
 margin_top = 301.0
 margin_right = 513.0
 margin_bottom = 301.0
+popup_exclusive = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_mission1"]
 margin_left = -150.0
-margin_top = -74.0
+margin_top = -65.0
 margin_right = 150.0
-margin_bottom = 71.0
+margin_bottom = 80.0
 text = "Hey little rat,
 I have a new mission for you...
 
 Hear I have a sound for you. Can you hear it?
 Yeah, it is a LASER.
-Find the laser with this sound for me!
-
-[Klick to close this message]"
+Find the laser with this sound for me!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -229,6 +228,7 @@ margin_left = 513.0
 margin_top = 301.0
 margin_right = 513.0
 margin_bottom = 301.0
+popup_exclusive = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_mission2"]
 margin_left = -175.0
@@ -254,6 +254,7 @@ margin_left = 513.0
 margin_top = 301.0
 margin_right = 513.0
 margin_bottom = 301.0
+popup_exclusive = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_mission3"]
 margin_left = -100.0
@@ -273,6 +274,7 @@ margin_left = 513.0
 margin_top = 301.0
 margin_right = 513.0
 margin_bottom = 301.0
+popup_exclusive = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_failed"]
 margin_left = -100.0
@@ -285,6 +287,23 @@ I'll play a new sound for you.
 
 Hear to it more carefully now!!!"
 
+[node name="Popup_hint" type="Popup" parent="ansagen"]
+margin_left = 513.0
+margin_top = 301.0
+margin_right = 513.0
+margin_bottom = 301.0
+popup_exclusive = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_hint"]
+margin_left = -100.0
+margin_top = -35.0
+margin_right = 112.0
+margin_bottom = 52.0
+text = "Ahh. You need a hint?
+
+I'll play the sounds again"
+
 [node name="Tween" type="Tween" parent="ansagen"]
 [connection signal="animation_finished" from="rat/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="timeout" from="laser_sounds_without_loop/Time_laser_needs" to="." method="_on_Time_laser_needs_timeout"]
+[connection signal="tween_completed" from="ansagen/Tween" to="." method="_on_Tween_tween_completed"]
