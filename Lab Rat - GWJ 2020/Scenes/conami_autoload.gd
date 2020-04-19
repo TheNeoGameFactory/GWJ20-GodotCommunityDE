@@ -47,6 +47,7 @@ func _Button_unpaused_pressed():
 func _ready():
 	pause_mode = $"/root/grundgerüst/Pausenmenü".PAUSE_MODE_PROCESS
 	$"/root/grundgerüst/Pausenmenü/Button".connect("pressed", self, "_Button_unpaused_pressed")
+	$"/root/grundgerüst/Pausenmenü/Button2".connect("pressed", self, "_Exit_unpaused_pressed")
 
 func konami_video_finished():
 	konami_video.visible=false
@@ -54,3 +55,7 @@ func konami_video_finished():
 		
 	
 	
+
+
+func _Exit_unpaused_pressed():
+	get_tree().quit()
