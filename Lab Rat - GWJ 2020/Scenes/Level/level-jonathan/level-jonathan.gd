@@ -12,6 +12,7 @@ var mission_to_do = []
 
 var possible_laser = []
 
+var hint_used = false
 
 var gerade_vorspiel = false
 var takt_im_vorspiel = 1
@@ -22,12 +23,13 @@ func _ready():
 	show_text_popup("ansagen/Popup_mission1")
 	var lasers =  possible_laser.duplicate()
 	get_new_laser_config(current_mission,lasers)
-	play_laser_sounds(mission_to_do)
 	
 
 func _process(delta):
 	if not gerade_vorspiel and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right")):
 		get_node("ansagen/Popup_mission"+str(current_mission)).hide()
+		get_node("ansagen/Popup_failed").hide()
+		get_node("ansagen/Popup_hint").hide()
 	
 	
 	$ansagen.rect_size = get_viewport().size
@@ -68,8 +70,8 @@ func play_laser_sounds(sounds):
 		sound_to_stop.playing = false
 	print("vorspiel gestartet")
 	laenge_des_vorspiels = len(sounds)
-	takt_im_vorspiel = 0
-	#get_node("laser_sounds_without_loop/"+str(sounds[0])).playing = true
+	takt_im_vorspiel = 1
+	get_node("laser_sounds_without_loop/"+str(sounds[0])).playing = true
 	get_node("laser_sounds_without_loop/Time_laser_needs").start()
 
 
@@ -91,6 +93,7 @@ func _on_Time_laser_needs_timeout():
 
 
 func show_text_popup(popup_path):
+	gerade_vorspiel = true
 	get_node(popup_path).popup()
 	get_node("ansagen/Tween").interpolate_property(get_node(popup_path+"/RichTextLabel"), "percent_visible", 0.0, 1.0, 7)
 	get_node("ansagen/Tween").start()
@@ -104,4 +107,12 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		$rat.transform = $rat_start_pos.transform
 
 
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_H and not hint_used:
+			show_text_popup("ansagen/Popup_hint")
+			hint_used = true
 
+
+func _on_Tween_tween_completed(object, key):
+	play_laser_sounds(mission_to_do)
