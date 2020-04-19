@@ -26,6 +26,10 @@ func _ready():
 	
 
 func _process(delta):
+	if not gerade_vorspiel and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right")):
+		get_node("ansagen/Popup_mission"+str(current_mission)).hide()
+	
+	
 	$ansagen.rect_size = get_viewport().size
 	if gerade_vorspiel:
 		$rat.set_physics_process(false)
@@ -98,3 +102,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		get_tree().change_scene("res://Scenes/Menus/HauptMenu/HauptMenu.tscn")
 	if anim_name == "linght_blink_red" or (anim_name == "linght_blink_green" and mission_archieved == []):
 		$rat.transform = $rat_start_pos.transform
+
+
+

@@ -206,6 +206,7 @@ margin_left = 513.0
 margin_top = 301.0
 margin_right = 513.0
 margin_bottom = 301.0
+popup_exclusive = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_mission1"]
 margin_left = -150.0
@@ -229,6 +230,7 @@ margin_left = 513.0
 margin_top = 301.0
 margin_right = 513.0
 margin_bottom = 301.0
+popup_exclusive = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_mission2"]
 margin_left = -175.0
@@ -254,6 +256,7 @@ margin_left = 513.0
 margin_top = 301.0
 margin_right = 513.0
 margin_bottom = 301.0
+popup_exclusive = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_mission3"]
 margin_left = -100.0
@@ -273,6 +276,7 @@ margin_left = 513.0
 margin_top = 301.0
 margin_right = 513.0
 margin_bottom = 301.0
+popup_exclusive = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ansagen/Popup_failed"]
 margin_left = -100.0
