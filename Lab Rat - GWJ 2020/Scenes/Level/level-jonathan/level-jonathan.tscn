@@ -122,26 +122,26 @@ script = ExtResource( 6 )
 [node name="lasers" type="Spatial" parent="."]
 
 [node name="laser1" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 18.4589, 0.2, 9.75886 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 18.0996, 0.2, 9.75886 )
 farbe = Color( 0, 0, 1, 0.4 )
 
 [node name="laser2" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.68307, 0.2, 18.1898 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.68307, 0.2, 17.998 )
 farbe = Color( 1, 0, 0, 0.4 )
 laser_art = 2
 
 [node name="laser3" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -18.3831, 0.2, 11.3453 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -17.945, 0.2, 11.3453 )
 farbe = Color( 0, 1, 0, 0.4 )
 laser_art = 3
 
 [node name="laser4" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0569, 0.2, -18.4966 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0569, 0.2, -17.9621 )
 farbe = Color( 1, 1, 0, 0.4 )
 laser_art = 4
 
 [node name="laser5" parent="lasers" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69936, 0.200732, 2.14684 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69936, 0.200732, 1.99822 )
 farbe = Color( 1, 0, 1, 0.4 )
 laser_art = 6
 

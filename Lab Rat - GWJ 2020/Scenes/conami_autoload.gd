@@ -1,14 +1,14 @@
 extends Node
 
 
-var konami = ["up", "up", "down", "down", "left", "right", "left", "right", "B", "A"]
+var konami = ["up", "up", "down", "down", "left", "right", "left", "right", "B", "A"] 
 var lastet_inputs =[]
 
-
+	
 
 func _input(event):
 
-
+	
 	if event.is_action_pressed("ui_up"):
 		lastet_inputs.append("up")
 	elif event.is_action_pressed("ui_down"):
@@ -29,3 +29,4 @@ func _input(event):
 	if lastet_inputs == konami:
 		print("yeah, yeah, yeah!!!")
 		lastet_inputs.clear()
+	
