@@ -26,7 +26,7 @@ func _ready():
 	
 
 func _process(delta):
-	if not gerade_vorspiel and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right")):
+	if not gerade_vorspiel and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right")) or Input.is_action_pressed("continue"):
 		get_node("ansagen/Popup_mission"+str(current_mission)).hide()
 		get_node("ansagen/Popup_failed").hide()
 		get_node("ansagen/Popup_hint").hide()

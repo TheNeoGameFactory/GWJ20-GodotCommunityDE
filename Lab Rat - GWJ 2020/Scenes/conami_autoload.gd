@@ -25,8 +25,8 @@ func _input(event):
 			lastet_inputs.append("B")
 	if get_tree().get_current_scene().get_name() == "grundgerüst":
 		if event is InputEventKey and event.is_action_released("escape"):
-			$"/root/grundgerüst/rat".set_physics_process(pause)
 			pause = !pause
+			get_tree().paused = pause
 			$"/root/grundgerüst/Pausenmenü".visible = pause
 
 
@@ -38,7 +38,16 @@ func _input(event):
 		konami_video.visible=true
 		konami_video.play()
 		lastet_inputs.clear()
-		
+
+func _Button_unpaused_pressed():
+	pause = !pause
+	get_tree().paused = false
+	$"/root/grundgerüst/Pausenmenü".visible = false
+
+func _ready():
+	pause_mode = $"/root/grundgerüst/Pausenmenü".PAUSE_MODE_PROCESS
+	$"/root/grundgerüst/Pausenmenü/Button".connect("pressed", self, "_Button_unpaused_pressed")
+
 func konami_video_finished():
 	konami_video.visible=false
 	konami_video.stop()

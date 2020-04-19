@@ -61,8 +61,3 @@ func _ready():
 	timer.name = "timer"
 	add_child(timer)
 	timer.connect("timeout", self, "_timer_finish")
-
-func _on_Button_pressed():
-	set_physics_process(conami.pause)
-	conami.pause = !conami.pause
-	get_parent().get_node("Pausenmenü").visible = conami.pause

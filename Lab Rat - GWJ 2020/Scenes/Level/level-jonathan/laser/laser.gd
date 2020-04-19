@@ -28,7 +28,7 @@ func _process(delta):
 
 func _on_Area_body_entered(body):
 	
-	if body.get_parent().name == "rat" and not used:
+	if body.name == "rat" and not used:
 		get_node("../..").mission_archieved.append(laser_art)
 		print(get_node("../..").mission_to_do[len(get_node("../..").mission_archieved)-1])
 		if get_node("../..").mission_to_do[len(get_node("../..").mission_archieved)-1] == laser_art:
