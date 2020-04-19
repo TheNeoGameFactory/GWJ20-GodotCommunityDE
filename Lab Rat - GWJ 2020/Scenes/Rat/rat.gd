@@ -38,7 +38,7 @@ func _physics_process(delta):
 	move = move_and_slide(move*speed)
 	
 	if easterEggCanStart and not easterEggTimerStarted:
-		timer.start(200)
+		timer.start(140)
 		easterEggTimerStarted=true
 		
 	if easterEggTimerStarted and not easterEggCanStart:

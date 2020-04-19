@@ -14,8 +14,9 @@ material = SubResource( 2 )
 radius = 0.1
 mid_height = 4.0
 
-[sub_resource type="CapsuleShape" id=4]
-height = 4.0
+[sub_resource type="CylinderShape" id=4]
+radius = 1.17972
+height = 3.82945
 
 [node name="laser" type="Spatial"]
 script = ExtResource( 1 )
@@ -35,6 +36,7 @@ material/0 = null
 [node name="sound_area" type="Area" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="sound_area"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
 shape = SubResource( 4 )
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="sound_area" to="." method="_on_sound_area_body_entered"]
