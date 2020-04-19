@@ -39,4 +39,3 @@ func konami_video_finished():
 		
 	
 	
-
