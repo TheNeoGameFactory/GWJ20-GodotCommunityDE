@@ -6,7 +6,7 @@ var laser_count = 0
 var mission_archieved = [] #hier wird gespeichert, welche laser schon "geöfnet" wurden
 var last_laser_went_into = 0
 var current_mission = 1
-var highest_mission = 3
+var highest_mission = 5
 
 var mission_to_do = []
 
@@ -43,7 +43,7 @@ func _process(delta):
 			get_new_laser_config(current_mission,lasers)
 			mission_archieved = []
 			show_text_popup("ansagen/Popup_mission"+str(current_mission))
-			play_laser_sounds(mission_to_do)
+			#play_laser_sounds(mission_to_do)
 
 
 func laser_wants_to_play_musik(laser_type):
