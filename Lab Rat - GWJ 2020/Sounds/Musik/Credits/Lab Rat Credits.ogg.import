@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Lab Rat Credits.ogg-3605373d78a32caf638da852e45b8ac8.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Musik/Credits/Lab Rat Credits.ogg"
+dest_files=[ "res://.import/Lab Rat Credits.ogg-3605373d78a32caf638da852e45b8ac8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
