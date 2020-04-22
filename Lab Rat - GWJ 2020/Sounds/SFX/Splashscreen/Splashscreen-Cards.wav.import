@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Splashscreen-Cards.wav-2cd314e9ae9a5c504a3d4bc5f9720729.sample"
+
+[deps]
+
+source_file="res://Sounds/SFX/Splashscreen/Splashscreen-Cards.wav"
+dest_files=[ "res://.import/Splashscreen-Cards.wav-2cd314e9ae9a5c504a3d4bc5f9720729.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
