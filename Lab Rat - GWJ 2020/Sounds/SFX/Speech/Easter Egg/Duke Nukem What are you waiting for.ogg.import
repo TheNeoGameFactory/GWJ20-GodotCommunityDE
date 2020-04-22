@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Duke Nukem What are you waiting for.ogg-69a7d409dd5919dbd784fbce0ef7f8a5.oggstr"
+
+[deps]
+
+source_file="res://Sounds/SFX/Speech/Easter Egg/Duke Nukem What are you waiting for.ogg"
+dest_files=[ "res://.import/Duke Nukem What are you waiting for.ogg-69a7d409dd5919dbd784fbce0ef7f8a5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
