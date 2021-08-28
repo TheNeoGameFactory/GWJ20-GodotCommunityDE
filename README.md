@@ -1,2 +1,4 @@
 # GWJ20-GodotCommunityDE
-Godot Wild Jam #20
+Das ist die Projektseite für den
+__Godot Wild Jam #20__
+der deutschsprachigen Godot Community

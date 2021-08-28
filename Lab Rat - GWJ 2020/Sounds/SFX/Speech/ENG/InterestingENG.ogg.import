@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/InterestingENG.ogg-70b57b2c5ccb372b2a6e0866e83cb9b5.oggstr"
+
+[deps]
+
+source_file="res://Sounds/SFX/Speech/ENG/InterestingENG.ogg"
+dest_files=[ "res://.import/InterestingENG.ogg-70b57b2c5ccb372b2a6e0866e83cb9b5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
